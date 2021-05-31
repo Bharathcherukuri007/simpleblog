@@ -129,7 +129,14 @@ def show(request):
 
 
 
-
+def home(request):
+    form = registerForm()
+    msg = 'Hello'
+    context = {
+        "form": form,
+        "msg": msg
+    }
+    return render(request,"register.html",context)
 
 
 
